@@ -45,7 +45,7 @@ def collect_horz(x, y):
     global collected
     # left
     for i in range(y, -1, - 1):
-        if patch[i][x] != "*":
+        if patch[x][i] != "*":
             if usedSegments[x][i] != "U":
                 collected += patch[x][i]
                 usedSegments[x][i] = "U"
@@ -57,7 +57,7 @@ def collect_horz(x, y):
 
     # Right
     for i in range(y, len(patch[x])):
-        if patch[i][x] != "*":
+        if patch[x][i] != "*":
             if usedSegments[x][i] != "U":
                 collected += patch[x][i]
                 usedSegments[x][i] = "U"
